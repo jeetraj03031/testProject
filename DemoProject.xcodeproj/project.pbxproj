@@ -26,6 +26,9 @@
 		C40FCA5C2525118600866F0E /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40FCA5B2525118600866F0E /* Result.swift */; };
 		C40FCA5E252513B800866F0E /* PhotosViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40FCA5D252513B800866F0E /* PhotosViewModel.swift */; };
 		C44935DB252520AB00CAEAFB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C44935DA252520AB00CAEAFB /* SceneDelegate.swift */; };
+		C44935DD252542AE00CAEAFB /* UserDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = C44935DC252542AE00CAEAFB /* UserDataSource.swift */; };
+		C44935DF252542D300CAEAFB /* DynamicValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = C44935DE252542D300CAEAFB /* DynamicValue.swift */; };
+		C45237DC25254F430079EC93 /* logo.gif in Resources */ = {isa = PBXBuildFile; fileRef = C45237DB25254F420079EC93 /* logo.gif */; };
 		C917EB991C028F83A644A6BC /* Pods_DemoProjectTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89C99A483B039FAF0316F21D /* Pods_DemoProjectTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -77,6 +80,9 @@
 		C40FCA5B2525118600866F0E /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		C40FCA5D252513B800866F0E /* PhotosViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosViewModel.swift; sourceTree = "<group>"; };
 		C44935DA252520AB00CAEAFB /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		C44935DC252542AE00CAEAFB /* UserDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataSource.swift; sourceTree = "<group>"; };
+		C44935DE252542D300CAEAFB /* DynamicValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicValue.swift; sourceTree = "<group>"; };
+		C45237DB25254F420079EC93 /* logo.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = logo.gif; path = ../../../Downloads/logo.gif; sourceTree = "<group>"; };
 		C7684C8C2AB83AB4AB5D3461 /* Pods-DemoProjectTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DemoProjectTests.debug.xcconfig"; path = "Target Support Files/Pods-DemoProjectTests/Pods-DemoProjectTests.debug.xcconfig"; sourceTree = "<group>"; };
 		D2B2C3F0E314254755272FDD /* Pods_DemoProject_DemoProjectUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DemoProject_DemoProjectUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -137,6 +143,7 @@
 				C40FCA022525001E00866F0E /* AppDelegate.swift */,
 				C44935DA252520AB00CAEAFB /* SceneDelegate.swift */,
 				C40FCA062525001E00866F0E /* SplashVC.swift */,
+				C45237DB25254F420079EC93 /* logo.gif */,
 				C40FCA4E25250CAA00866F0E /* Model */,
 				C40FCA3825250BEA00866F0E /* Service */,
 				C40FCA372525075A00866F0E /* ViewModel */,
@@ -180,6 +187,7 @@
 			isa = PBXGroup;
 			children = (
 				C40FCA5D252513B800866F0E /* PhotosViewModel.swift */,
+				C44935DC252542AE00CAEAFB /* UserDataSource.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -198,6 +206,7 @@
 			isa = PBXGroup;
 			children = (
 				C40FCA4F25250CE200866F0E /* RootModel.swift */,
+				C44935DE252542D300CAEAFB /* DynamicValue.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -354,6 +363,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C40FCA0F2525002200866F0E /* LaunchScreen.storyboard in Resources */,
+				C45237DC25254F430079EC93 /* logo.gif in Resources */,
 				C40FCA0C2525002200866F0E /* Assets.xcassets in Resources */,
 				C40FCA0A2525001E00866F0E /* Main.storyboard in Resources */,
 			);
@@ -492,7 +502,9 @@
 				C40FCA5C2525118600866F0E /* Result.swift in Sources */,
 				C40FCA5A2525115000866F0E /* ErrorResult.swift in Sources */,
 				C40FCA34252502BD00866F0E /* ListViewController.swift in Sources */,
+				C44935DF252542D300CAEAFB /* DynamicValue.swift in Sources */,
 				C40FCA5E252513B800866F0E /* PhotosViewModel.swift in Sources */,
+				C44935DD252542AE00CAEAFB /* UserDataSource.swift in Sources */,
 				C40FCA5225250D7200866F0E /* Reachability.swift in Sources */,
 				C44935DB252520AB00CAEAFB /* SceneDelegate.swift in Sources */,
 			);

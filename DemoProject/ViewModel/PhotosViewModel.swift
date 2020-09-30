@@ -8,23 +8,29 @@
 
 import Foundation
 
-class PhotosViewModel: NSObject {
+struct PhotosViewModel {
     
+    weak var dataSource : GenericDataSource<RootModel>?
+    var onErrorHandling : ((ErrorResult?) -> Void)?
 
-    func fetchData(_ page: String,completion: @escaping(Result<[RootModel],ErrorResult>)->Void){
+    init(_ dataSource: GenericDataSource<RootModel>?) {
+        self.dataSource = dataSource
+    }
+    
+    func fetchData(_ page: String){
         RequestService.shared.loadData(page: page) { (result) in
             switch result{
             case .success(let data):
                 do{
                     let jsonD = JSONDecoder()
                     let resp = try jsonD.decode([RootModel].self, from: data)
-                    completion(.success(resp))
+                    self.dataSource?.data.value = resp
                 }catch{
-                    completion(.failure(.parser(string: "Unable to decode Response")))
+                    self.onErrorHandling?(.custom(string: "Unable to decode the json response"))
                 }
                 break
             case .failure(let error):
-                completion(.failure(.network(string: "Ooops Something Went Wrong")))
+                self.onErrorHandling?(.custom(string: error.localizedDescription))
                 break
             }
         }

@@ -7,21 +7,30 @@
 //
 
 import UIKit
+import SwiftyGif
 
 class SplashVC: UIViewController {
+    
+    @IBOutlet weak var imgView: UIImageView!
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
         self.navigationController?.navigationBar.isHidden = true
+        do{
+            let gif = try UIImage(gifName: "logo.gif")
+            self.imgView.setGifImage(gif, loopCount: -1) // Will loop forever
+        }catch{
+            
+        }
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 5.0) {
             
             self.navigationController?.navigationBar.isHidden = false
             let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ListViewController") as! ListViewController
-           // vc.modalPresentationStyle = .overFullScreen
-           // self.present(vc, animated: true, completion: nil)
             self.navigationController?.pushViewController(vc, animated: true)
         }
     }
