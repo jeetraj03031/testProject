@@ -7,10 +7,26 @@
 //
 
 import UIKit
+import Nuke
 
 class ListTableViewCell: UITableViewCell {
     
-    @IBOutlet weak var imgView: UIView!
+    @IBOutlet weak var imgView: UIImageView!
+    @IBOutlet weak var lblAuthorName: UILabel!
+    
+    //ImageView Loading Options
+    let options = ImageLoadingOptions(
+        placeholder: UIImage(named: "placeholder"),
+        transition: .fadeIn(duration: 0.2),
+        contentModes: .init(success: .scaleAspectFit, failure: .center, placeholder: .scaleAspectFit)
+        
+    )
+    
+    var imgURL: String = ""{
+        didSet{
+            Nuke.loadImage(with: URL(string: imgURL)!,options: options, into: self.imgView)
+        }
+    }
     
 
     override func awakeFromNib() {
