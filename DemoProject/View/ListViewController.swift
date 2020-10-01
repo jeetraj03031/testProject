@@ -32,7 +32,7 @@ class ListViewController: UIViewController {
         
         tableView.dataSource = self.dataSource
         
-        self.tableView.estimatedRowHeight = 200 // Estimated default row height
+        self.tableView.estimatedRowHeight = 150 // Estimated default row height
         self.tableView.rowHeight = UITableView.automaticDimension
         
         addRefreshControl()

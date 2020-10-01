@@ -18,7 +18,7 @@ class ListTableViewCell: UITableViewCell {
     let options = ImageLoadingOptions(
         placeholder: UIImage(named: "placeholder"),
         transition: .fadeIn(duration: 0.2),
-        contentModes: .init(success: .scaleAspectFit, failure: .center, placeholder: .scaleAspectFit)
+        contentModes: .init(success: .scaleAspectFill, failure: .center, placeholder: .scaleAspectFit)
         
     )
     
